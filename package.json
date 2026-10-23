@@ -1,0 +1,17 @@
+{
+  "name": "week-date-arithmetic",
+  "version": "0.1.0",
+  "description": "Adds and subtracts ISO 8601 week dates directly without converting to or from Gregorian calendar dates",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
