@@ -39,3 +39,10 @@ All functions are pure and return new objects; inputs are never mutated.
 - `subDays(date, days)` — `addDays(date, -days)`.
 - `weeksInIsoYear(isoYear)` — `52` or `53`.
 - `isLeapYear(year)` — `1` or `0` (gregorian, exposed because the 53-week rule depends on it).
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
